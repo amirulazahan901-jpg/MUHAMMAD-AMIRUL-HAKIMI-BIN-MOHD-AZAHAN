@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="image/gambar star.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Amirul Hakimi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific enhancements for individual descriptions in the gallery grid */
+        .gallery-item {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            text-align:left;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .gallery-item .img-placeholder {
+            height: 180px;
+            width: 100%;
+            margin: 0 0 12px 0;
+        }
+        .gallery-item p {
+            font-size: 0.95rem;
+            color: #444;
+            margin: 0;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Amirul Hakimi</h1>
+        <p>Multimedia Memory Collections</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="biodata.html">Biodata</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <div class="search-container">
+            <form action="#" method="GET">
+                <input type="text" placeholder="Search keywords..." name="search">
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+        </ul>
+    </nav>
+
+    <div id="clock-container">
+        <span id="live-date-day"></span> | Live Time: <span id="digital-clock"></span>
+    </div>
+
+    <main class="container">
+        <section class="card">
+            <h2>Campus Memories & Visual Album</h2>
+            <p style="margin-bottom: 25px;">A visual collection of memories, campus life at UiTM Segamat, and things I love.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="img-placeholder">
+                        <img src="image/gambar amirul 8.jpeg" alt="UiTM Segamat Campus Life" width="100" height="200" onerror="this.style.display='none';">
+                    
+                    </div>
+                    <p>A glimpse into my academic lifestyle, beautiful campus surroundings, and student activities at UiTM Cawangan Johor, Kampus Segamat.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="img-placeholder">
+                        <img src="image/gambar amirul 15.jpeg" alt="Outreach Program" width="100" height="200" onerror="this.style.display='none';">
+                        
+                    </div>
+                    <p>Fulfilling my leadership role as the program director during our impactful student outreach community program at Sekolah Henry Gurney, Melaka.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="img-placeholder">
+                        <img src="image/gambar amirul 22.jpeg" alt="Sports and Recreation" width="100" height="200" onerror="this.style.display='none';">
+                        
+                    </div>
+                    <p>Staying active outside of lectures by engaging in various recreational activities and sports, which helps keep me focused and energetic.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="img-placeholder">
+                        <img src="image/gambar amirul 22.jpeg" alt="UiTM Segamat Campus Life" width="100" height="200" onerror="this.style.display='none';">
+                        
+                    </div>
+                    <p>A place where I started my industrial training at Perbendaharaan Negeri Selangor. It was a blessed because I have been surrounded by good people.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="img-placeholder">
+                        <img src="image/gambar amirul 20.jpeg" alt="Outreach Program" width="100" height="200" onerror="this.style.display='none';">
+                        
+                    </div>
+                    <p>I love taking a cinematic photo. It makes me feel calm and I love minimalist photo style.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="img-placeholder">
+                        <img src="image/gambar amirul 21.jpeg" alt="Sports and Recreation" width="100" height="200" onerror="this.style.display='none';">
+                        
+                    </div>
+                    <p>I love taking picture before I'm eating a food. Food is my comfort things.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Multimedia Features</h2>
+            <p>Let's hear and experience my streams below:</p>
+            
+            <h3>My Favourite Song</h3>
+            <h4><i>Hindia - everything u are</i></h4>
+            <audio controls style="margin-top: 10px; width: 100%; max-width: 400px;">
+                <source src="audio/lagu amirul 1.mp3" type="audio/mpeg">
+                
+            </audio>
+
+            <h3 style="margin-top:25px;">My Latest Video</h3>
+            <h4><i>My Fav Cinematic Video</i></h4>
+            <video width="100%" max-width="500" controls style="border-radius:5px; margin-top:10px;">
+                <source src="video/video amirul 1.mp4" type="video/mp4">
+                
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Muhammad Amirul Hakimi bin Mohd Azahan. All Rights Reserved. | IMD318 Individual Project</p>
+    </footer>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            
+            // 1. Format options for Day and Date (e.g., Sunday, June 14, 2026)
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDateString = now.toLocaleDateString('en-US', dateOptions);
+            
+            // 2. Format options for running clock time (e.g., 12:45:30 AM)
+            const formattedTimeString = now.toLocaleTimeString('en-US');
+            
+            // Injecting text into respective placeholders smoothly
+            document.getElementById('live-date-day').innerText = formattedDateString;
+            document.getElementById('digital-clock').innerText = formattedTimeString;
+        }
+        
+        // Execute dynamic update cycle instantly and loop every second
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
