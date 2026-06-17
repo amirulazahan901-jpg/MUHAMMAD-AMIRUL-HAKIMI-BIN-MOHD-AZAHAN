@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Amirul Hakimi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific adjustments to size image cells neatly inside your table matrix */
+        .edu-table th {
+            text-align: center;
+        }
+        .edu-table td {
+            vertical-align: middle;
+        }
+        .edu-img-cell {
+            width: 200px;
+            text-align: center;
+        }
+        .edu-img-cell .img-placeholder {
+            height: 100px;
+            width: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Amirul Hakimi</h1>
+        <p>Academic History</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="biodata.html">Biodata</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="education.html" class="active">Education</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <div class="search-container">
+            <form action="#" method="GET">
+                <input type="text" placeholder="Search keywords..." name="search">
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+        </ul>
+    </nav>
+
+    <div id="clock-container">
+        <span id="live-date-day"></span> | Live Time: <span id="digital-clock"></span>
+    </div>
+
+    <main class="container">
+        <section class="card">
+            <h2>Educational Milestones</h2>
+            
+            <table class="edu-table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Institution</th>
+                        <th>Visual Record</th>
+                        <th>Achievement / Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center; font-weight: bold;">2012 - 2017</td>
+                        <td><strong>SK Telok Menegon, Klang</strong></td>
+                        <td class="edu-img-cell" title="SKTM">
+                            <div class="img-placeholder">
+                                <img src="image/SKTM.jpg" 
+                                     alt="SK Telok Menegon" 
+                                     width="180" 
+                                     height="100" 
+                                     usemap="#map-sk"
+                                     style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                                     onerror="this.style.display='none';">
+                            </div>
+                        </td>
+                        <td>4A 2B</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; font-weight: bold;">2018 - 2023</td>
+                        <td><strong>SAM Sultan Hisamuddin Sungai Bertih, Klang</strong></td>
+                        <td class="edu-img-cell" title="SAMBERT">
+                            <div class="img-placeholder">
+                                <img src="image/SAMBERT.jpg" 
+                                     alt="SAM Sultan Hisamuddin" 
+                                     width="180" 
+                                     height="100" 
+                                     usemap="#map-sam"
+                                     style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                                     onerror="this.style.display='none';">
+                            </div>
+                        </td>
+                        <td>5A 4B 1C</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; font-weight: bold;">2023 - 2024</td>
+                        <td><strong>Pre-Commerce in Business (UiTM Jengka)</strong></td>
+                        <td class="edu-img-cell" title="JENGKALIFORNIA">
+                            <div class="img-placeholder">
+                                <img src="image/UiTM JENGKA.JPG" 
+                                     alt="UiTM Jengka" 
+                                     width="180" 
+                                     height="100" 
+                                     usemap="#map-jengka"
+                                     style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                                     onerror="this.style.display='none';">
+                            </div>
+                        </td>
+                        <td><mark style="background-color: #ffd700; padding: 2px 5px; font-weight: bold;">CGPA 4.0</mark></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; font-weight: bold;">2024 - 2026</td>
+                        <td><strong>Diploma in Information Management (UiTM Segamat)</strong></td>
+                        <td class="edu-img-cell" title="SEGAMAT HIGHLAND">
+                            <div class="img-placeholder">
+                                <img src="image/UiTM SEGAMAT.jpg" 
+                                     alt="UiTM Segamat" 
+                                     width="180" 
+                                     height="100" 
+                                     usemap="#map-segamat"
+                                     style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                                     onerror="this.style.display='none';">
+                            </div>
+                        </td>
+                        <td><strong>CGPA 3.75</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <map name="map-sk">
+                <area shape="rect" coords="0,0,180,100" alt="SK Telok Menegon Facebook" href="https://www.facebook.com/sektelok.menegon/" target="_blank" title="Visit SK Telok Menegon Facebook Page">
+            </map>
+
+            <map name="map-sam">
+                <area shape="rect" coords="0,0,180,100" alt="SAM Sultan Hisamuddin Facebook" href="https://www.facebook.com/samshsbklang" target="_blank" title="Visit SAM Sultan Hisamuddin Facebook Page">
+            </map>
+
+            <map name="map-jengka">
+                <area shape="rect" coords="0,0,180,100" alt="UiTM Pahang Facebook" href="https://www.facebook.com/uitm.pahang.3/" target="_blank" title="Visit UiTM Pahang Facebook Page">
+            </map>
+
+            <map name="map-segamat">
+                <area shape="rect" coords="0,0,180,100" alt="UiTM Johor Facebook" href="https://www.facebook.com/uitmjohorofficial/?locale=ms_MY" target="_blank" title="Visit UiTM Johor Facebook Page">
+            </map>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Muhammad Amirul Hakimi bin Mohd Azahan. All Rights Reserved. | IMD318 Individual Project</p>
+    </footer>
+
+    <script>
