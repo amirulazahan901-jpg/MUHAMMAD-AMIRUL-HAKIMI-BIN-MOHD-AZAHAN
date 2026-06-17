@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="image/gambar star.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata - Amirul Hakimi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Amirul Hakimi</h1>
+        <p>Biodata Profile</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="biodata.html" class="active">Biodata</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="family.html">Family</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <div class="search-container">
+            <form action="#" method="GET">
+                <input type="text" placeholder="Search keywords..." name="search">
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+        </ul>
+    </nav>
+
+    <div id="clock-container">
+        <span id="live-date-day"></span> | Live Time: <span id="digital-clock"></span>
+    </div>
+
+    <main class="container">
+        <section class="card">
+            <h2>Personal Identity</h2>
+            
+            <div class="img-placeholder" style="max-width: 450px; height: 300px; margin: 20px auto;">
+                <img src="image/gambar family.jpeg" 
+                     alt="School Prefect Duties" 
+                     width="450" 
+                     height="300" 
+                     usemap="#split-profile-map"
+                     style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                     onerror="this.style.display='none';">
+            </div>
+
+            <map name="split-profile-map">
+                <area shape="rect" coords="0,0,150,300" alt="Biodata" href="family.html" title="View Family Profile">
+                
+                <area shape="rect" coords="150,0,300,300" alt="Experience" href="experience.html" title="View Experience Timeline">
+                
+                <area shape="rect" coords="300,0,450,300" alt="Education" href="education.html" title="View Education Matrix">
+            </map>
+
+            <table>
+                <tr>
+                    <th>Detail</th>
+                    <th>Information</th>
+                </tr>
+                <tr><td><strong>Name</strong></td><td>Muhammad Amirul Hakimi bin Mohd Azahan</td></tr>
+                <tr><td><strong>Age</strong></td><td>21 years old</td></tr>
+                <tr><td><strong>Date of Birth</strong></td><td>09 January 2005</td></tr>
+                <tr><td><strong>Student ID</strong></td><td>2024912729</td></tr>
+                <tr><td><strong>Religion</strong></td><td>Islam</td></tr>
+                <tr><td><strong>Nationality</strong></td><td>Malaysian</td></tr>
+                <tr><td><strong>Place of Birth</strong></td><td>Hospital Tengku Ampuan Rahimah, Klang</td></tr>
+                <tr><td><strong>Current Residence</strong></td><td>Klang, Selangor</td></tr>
+                <tr><td><strong>Programme</strong></td><td>Diploma in Information Management</td></tr>
+            </table>
+
+            <h3>My Favourite Quotes</h3>
+            <blockquote style="border-left: 5px solid var(--primary-color); padding-left: 15px; font-style: italic; margin: 15px 0;">
+                <p>"Strives for Excellence"</p>
+            </blockquote>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Muhammad Amirul Hakimi bin Mohd Azahan. All Rights Reserved. | IMD318 Individual Project</p>
+    </footer>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            
+            // 1. Format options for Day and Date (e.g., Sunday, June 14, 2026)
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDateString = now.toLocaleDateString('en-US', dateOptions);
+            
+            // 2. Format options for running clock time (e.g., 12:45:30 AM)
+            const formattedTimeString = now.toLocaleTimeString('en-US');
+            
+            // Injecting text into respective placeholders smoothly
+            document.getElementById('live-date-day').innerText = formattedDateString;
+            document.getElementById('digital-clock').innerText = formattedTimeString;
+        }
+        
+        // Execute dynamic update cycle instantly and loop every second
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
